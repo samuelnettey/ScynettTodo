@@ -1,2 +1,2 @@
 # ScynettTodoApp
-This is a smaple application to demonstrate Clean Architecture
+This is a sample application to demonstrate Clean Architecture
