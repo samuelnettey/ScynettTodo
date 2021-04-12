@@ -53,6 +53,8 @@ namespace ScynettTodo.Api
                 // optional - default path to view services is /listallservices - recommended to choose your own path
                 config.Path = "/listservices";
             });
+            
+            services.AddCors();
         }
 
         public void ConfigureContainer(ContainerBuilder builder)
@@ -84,6 +86,10 @@ namespace ScynettTodo.Api
 
             // Enable middleware to serve swagger-ui (HTML, JS, CSS, etc.), specifying the Swagger JSON endpoint.
             app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "My API V1"));
+
+                
+            app.UseCors(builder =>
+                builder.WithOrigins("http://localhost:5000"));
 
             app.UseEndpoints(endpoints =>
             {
