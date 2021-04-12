@@ -10,16 +10,14 @@
     <PackageReference Include="Fluxor.Blazor.Web.ReduxDevTools" Version="4.0.0" />
     <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly" Version="5.0.3" />
     <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.DevServer" Version="5.0.3" PrivateAssets="all" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="5.0.3" />
+    <PackageReference Include="Microsoft.Extensions.Http" Version="5.0.0" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
     <PackageReference Include="System.Net.Http.Json" Version="5.0.0" />
   </ItemGroup>
 
   <ItemGroup>
     <Folder Include="Store\Features\Shared\Reducers" />
-    <Folder Include="Store\Features\Todos\Actions\CreateTodo" />
-    <Folder Include="Store\Features\Todos\Actions\DeleteTodo" />
-    <Folder Include="Store\Features\Todos\Actions\LoadTodoDetail" />
-    <Folder Include="Store\Features\Todos\Actions\UpdateTodo" />
   </ItemGroup>
 
 </Project>

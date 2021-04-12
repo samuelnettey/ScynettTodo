@@ -5,6 +5,7 @@ using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
 using System.Net.Http;
+using System.Net.Mime;
 using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
@@ -19,9 +20,6 @@ namespace ScynettTodo.Web
         {
             var builder = WebAssemblyHostBuilder.CreateDefault(args);
             builder.RootComponents.Add<App>("#app");
-
-            builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri("http://localhost:57679/") });
-           
             
             // Add Fluxor
             builder.Services.AddFluxor(options => 
@@ -30,6 +28,12 @@ namespace ScynettTodo.Web
                 options.UseReduxDevTools();
             });
             builder.Services.AddScoped<StateFacade>();
+            
+            builder.Services.AddHttpClient<DataService>(client =>
+            {
+               // client.DefaultRequestHeaders.Add("Content-Control", $"{MediaTypeNames.Application.Json}; charset=utf-8");
+                client.BaseAddress = new Uri("http://localhost:57679/");
+            });
             await builder.Build().RunAsync();
         }
     }

@@ -2,7 +2,7 @@ using Fluxor;
 using ScynettTodo.Web.Store.Features.Actions.LoadTodos;
 using ScynettTodo.Web.Store.State;
 
-namespace ScynettTodo.Web.Store.Features.Reducers
+namespace ScynettTodo.Web.Store.Features.Todos.Reducers
 {
     public static class LoadTodosActionsReducer
     {

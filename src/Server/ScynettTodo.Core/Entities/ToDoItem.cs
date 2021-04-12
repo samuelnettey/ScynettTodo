@@ -6,6 +6,7 @@ namespace ScynettTodo.Core.Entities
 {
     public class ToDoItem : BaseEntity, IAggregateRoot
     {
+        public int UserId  => 1;
         public string Title { get; set; } = string.Empty;
         public string Description { get; set; }
         public bool IsDone { get; private set; }

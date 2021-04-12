@@ -10,29 +10,44 @@
         </div>
     </div>
 }
-else if (TodosState.Value.HasCurrentErrors)
+else if (TodosState.Value.HasCurrentErrors || TodosState.Value.CurrentTodos is null)
 {
-    <span>Whoops! Looks like an issue occurred loading todos :(</span>
+    <div class="d-flex flex-column align-items-center">
+        <span class="py-2">Whoops! Looks like an issue occurred loading todos :(</span>
+        <button class="btn btn-info py-2" @onclick="() => Facade.LoadTodos()">Reload Todos</button>
+    </div>
 }
-else if (!(TodosState.Value.CurrentTodos is null) && TodosState.Value.CurrentTodos.Any())
+else if (!TodosState.Value.CurrentTodos.Any())
 {
-    <table class="table table-hover">
+    <CreateTodoForm />
+
+    <div class="d-flex flex-column align-items-center mt-2">
+        <span class="py-2">Looks like there's no todos...</span>
+        <button class="btn btn-info py-2" @onclick="() => Facade.LoadTodos()">Reload Todos</button>
+    </div>
+}
+else
+{
+    <CreateTodoForm />
+
+    <table class="table table-hover mt-2">
         <thead>
-        <tr>
+        <tr class="text-center">
             <th scope="col">ID</th>
             <th scope="col">Title</th>
+            <th scope="col">Descrition</th>
             <th scope="col">Completed</th>
-            <th scope="col">Description</th>
+          
         </tr>
         </thead>
         <tbody>
         @foreach (var todo in TodosState.Value.CurrentTodos)
         {
-            <tr>
+            <tr style="cursor: pointer;" class="text-center" @onclick="() => NavigateToTodoDetail(todo.Id)">
                 <td>@todo.Id</td>
                 <td>@todo.Title</td>
-                <td>@todo.IsDone</td>
                 <td>@todo.Description</td>
+                <td>@todo.IsDone</td>
             </tr>
         }
         </tbody>
