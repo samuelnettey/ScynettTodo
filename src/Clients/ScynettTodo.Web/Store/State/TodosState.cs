@@ -1,6 +1,6 @@
-using System;
 using System.Collections.Generic;
 using ScynettTodo.Web.Models;
+using ScynettTodo.Web.Models.Dtos;
 
 namespace ScynettTodo.Web.Store.State
 {

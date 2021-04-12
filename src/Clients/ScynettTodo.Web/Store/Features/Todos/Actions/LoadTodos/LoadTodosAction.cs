@@ -1,4 +1,4 @@
-namespace ScynettTodo.Web.Store.Features.Actions.LoadTodos
+namespace ScynettTodo.Web.Store.Features.Todos.Actions.LoadTodos
 {
     public class LoadTodosAction
     {

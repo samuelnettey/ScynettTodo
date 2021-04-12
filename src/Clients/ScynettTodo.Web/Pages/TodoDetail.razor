@@ -50,7 +50,7 @@ else
             <div class="d-flex flex-row justify-content-center pt-2">
                 <button type="submit" class="btn btn-secondary">Update</button>
                 <span class="px-2"></span>
-                <button class="btn btn-danger">Delete</button>
+                <button class="btn btn-danger"  @onclick="() => Facade.DeleteTodo(TodosState.Value.CurrentTodo.Id)">Delete</button>
             </div>
 
             <div class="py-3">

@@ -4,11 +4,11 @@ using System.Net.Http.Json;
 using System.Threading.Tasks;
 using Fluxor;
 using Microsoft.Extensions.Logging;
-using ScynettTodo.Web.Models;
+using ScynettTodo.Web.Models.Dtos;
 using ScynettTodo.Web.Services;
 using ScynettTodo.Web.Store.Features.Todos.Actions.UpdateTodo;
 
-namespace ScynettTodo.Web.Store.Features.Todos.Effects
+namespace ScynettTodo.Web.Store.Features.Todos.Effects.UpdateTodo
 {
     public class UpdateTodoEffect : Effect<UpdateTodoAction>
     {

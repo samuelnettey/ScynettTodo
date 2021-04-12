@@ -8,7 +8,7 @@ namespace ScynettTodo.Web.Store.State
         public bool IsLoading { get; }
 
         public string? CurrentErrorMessage { get; }
-
+        
         public bool HasCurrentErrors => !string.IsNullOrWhiteSpace(CurrentErrorMessage);
     }
 }

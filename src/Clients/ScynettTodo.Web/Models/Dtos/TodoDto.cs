@@ -1,4 +1,4 @@
-namespace ScynettTodo.Web.Models
+namespace ScynettTodo.Web.Models.Dtos
 {
     public class TodoDto
     {

@@ -2,6 +2,7 @@
 using System.Linq;
 using Fluxor;
 using ScynettTodo.Web.Models;
+using ScynettTodo.Web.Models.Dtos;
 using ScynettTodo.Web.Store.Features.Todos.Actions.UpdateTodo;
 using ScynettTodo.Web.Store.State;
 

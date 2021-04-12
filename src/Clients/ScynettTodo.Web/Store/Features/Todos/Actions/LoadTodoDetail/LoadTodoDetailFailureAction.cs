@@ -1,6 +1,6 @@
 ﻿using ScynettTodo.Web.Store.Features.Shared.Actions;
 
-namespace ScynettTodo.Web.Store.Features.Actions.LoadTodoDetail
+namespace ScynettTodo.Web.Store.Features.Todos.Actions.LoadTodoDetail
 {
     public class LoadTodoDetailFailureAction : FailureAction
     {

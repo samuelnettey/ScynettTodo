@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.Components;
 using Microsoft.Extensions.Logging;
 using ScynettTodo.Web.Store.Features.Todos.Actions.UpdateTodo;
 
-namespace ScynettTodo.Web.Store.Features.Todos.Effects
+namespace ScynettTodo.Web.Store.Features.Todos.Effects.UpdateTodo
 {
     public class UpdateTodoSuccessEffect : Effect<UpdateTodoSuccessAction>
     {

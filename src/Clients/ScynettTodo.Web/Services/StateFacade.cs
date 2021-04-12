@@ -2,9 +2,10 @@ using Fluxor;
 using Microsoft.Extensions.Logging;
 using ScynettTodo.Web.Models;
 using ScynettTodo.Web.Models.Dtos;
-using ScynettTodo.Web.Store.Features.Actions.LoadTodoDetail;
-using ScynettTodo.Web.Store.Features.Actions.LoadTodos;
 using ScynettTodo.Web.Store.Features.Todos.Actions.CreateTodo;
+using ScynettTodo.Web.Store.Features.Todos.Actions.DeleteTodo;
+using ScynettTodo.Web.Store.Features.Todos.Actions.LoadTodoDetail;
+using ScynettTodo.Web.Store.Features.Todos.Actions.LoadTodos;
 using ScynettTodo.Web.Store.Features.Todos.Actions.UpdateTodo;
 
 namespace ScynettTodo.Web.Services
@@ -46,6 +47,12 @@ namespace ScynettTodo.Web.Services
         {
             _logger.LogInformation($"Issuing action to load todo {id}...");
             _dispatcher.Dispatch(new LoadTodoDetailAction(id));
+        }
+        
+        public void DeleteTodo(int id)
+        {
+            _logger.LogInformation($"Issuing action to delete todo {id}");
+            _dispatcher.Dispatch(new DeleteTodoAction(id));
         }
     }
 }

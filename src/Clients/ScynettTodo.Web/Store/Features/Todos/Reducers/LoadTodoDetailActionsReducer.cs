@@ -1,5 +1,5 @@
 ﻿using Fluxor;
-using ScynettTodo.Web.Store.Features.Actions.LoadTodoDetail;
+using ScynettTodo.Web.Store.Features.Todos.Actions.LoadTodoDetail;
 using ScynettTodo.Web.Store.State;
 
 namespace ScynettTodo.Web.Store.Features.Todos.Reducers

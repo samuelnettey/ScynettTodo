@@ -1,7 +1,7 @@
 using Fluxor;
 using ScynettTodo.Web.Store.State;
 
-namespace ScynettTodo.Web.Store.Features
+namespace ScynettTodo.Web.Store.Features.Todos
 {
     public class TodosFeature : Feature<TodosState>
     {

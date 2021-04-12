@@ -1,7 +1,7 @@
 using System.Collections.Generic;
-using ScynettTodo.Web.Models;
+using ScynettTodo.Web.Models.Dtos;
 
-namespace ScynettTodo.Web.Store.Features.Actions.LoadTodos
+namespace ScynettTodo.Web.Store.Features.Todos.Actions.LoadTodos
 {
     public class LoadTodosSuccessAction
     {
