@@ -36,14 +36,16 @@ else
                 <strong class="px-2">Completed:</strong> 
                 <InputCheckbox class="form-check" @bind-Value="validationModel.Completed" />
             </div>
-            <div class="py-2 d-flex flex-row align-items-center">
-                <strong class="px-2">User:</strong> 
-                <InputNumber class="form-control" @bind-Value="validationModel.UserId"/>
-            </div>
+          
             <div class="py-2 d-flex flex-row align-items-center">
                 <strong class="px-2">Title:</strong> 
                 <InputText class="form-control" @bind-Value="validationModel.Title"/>
             </div>
+            
+                     <div class="py-2 d-flex flex-row align-items-center">
+                            <strong class="px-2">Description:</strong> 
+                            <InputText class="form-control" @bind-Value="validationModel.Description"/>
+                        </div>
 
             <div class="d-flex flex-row justify-content-center pt-2">
                 <button type="submit" class="btn btn-secondary">Update</button>

@@ -1,6 +1,7 @@
 using Fluxor;
 using Microsoft.Extensions.Logging;
 using ScynettTodo.Web.Models;
+using ScynettTodo.Web.Models.Dtos;
 using ScynettTodo.Web.Store.Features.Actions.LoadTodoDetail;
 using ScynettTodo.Web.Store.Features.Actions.LoadTodos;
 using ScynettTodo.Web.Store.Features.Todos.Actions.CreateTodo;
@@ -25,20 +26,22 @@ namespace ScynettTodo.Web.Services
         public void CreateTodo(string title, bool completed, string description)
         {
             // Construct our validated todo
-            var todoDto = new CreateOrUpdateTodoDto(title, completed, description);
+            var todoDto = new CreateTodoDto(title, completed, description);
 
             _logger.LogInformation($"Issuing action to create todo [{title}]");
             _dispatcher.Dispatch(new CreateTodoAction(todoDto));
         }
         
-        public void UpdateTodo(int id, string title, bool completed, string description)
+        public void UpdateTodo(int id, string title, string description)
         {
             // Construct our validated todo
-            var todoDto = new CreateOrUpdateTodoDto(title, completed, description);
+            var todoDto = new UpdateTodoDto(id, title, description);
 
             _logger.LogInformation($"Issuing action to update todo {id}");
             _dispatcher.Dispatch(new UpdateTodoAction(id, todoDto));
         }
+        
+        
         public void LoadTodoById(int id)
         {
             _logger.LogInformation($"Issuing action to load todo {id}...");

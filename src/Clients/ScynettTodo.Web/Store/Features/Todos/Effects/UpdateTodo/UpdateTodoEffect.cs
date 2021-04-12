@@ -23,7 +23,7 @@ namespace ScynettTodo.Web.Store.Features.Todos.Effects
             try
             {
                 _logger.LogInformation($"Updating todo {action.Id}...");
-                var updateResponse = await _apiService.PutAsync($"todos/{action.Id}", action.Todo);
+                var updateResponse = await _apiService.PutAsync($"/ToDoItems", action.Todo);
 
                 if (!updateResponse.IsSuccessStatusCode)
                 {

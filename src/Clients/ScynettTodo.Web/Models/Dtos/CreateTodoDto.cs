@@ -1,8 +1,8 @@
-﻿namespace ScynettTodo.Web.Models
+﻿namespace ScynettTodo.Web.Models.Dtos
 {
-    public class CreateOrUpdateTodoDto
+    public class CreateTodoDto
     {
-        public CreateOrUpdateTodoDto(string title, bool completed, string description) =>
+        public CreateTodoDto(string title, bool completed, string description) =>
             (Title, Completed, Description) = (title, completed, description);
 
         public string Title { get; }

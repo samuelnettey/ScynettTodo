@@ -13,7 +13,6 @@ namespace ScynettTodo.Web.Components
 
         protected override void OnInitialized()
         {
-            validationModel.UserId = 1;
 
             base.OnInitialized();
         }

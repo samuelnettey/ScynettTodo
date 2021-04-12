@@ -1,12 +1,13 @@
 ﻿using ScynettTodo.Web.Models;
+using ScynettTodo.Web.Models.Dtos;
 
 namespace ScynettTodo.Web.Store.Features.Todos.Actions.CreateTodo
 {
     public class CreateTodoAction
     {
-        public CreateTodoAction(CreateOrUpdateTodoDto todo) =>
+        public CreateTodoAction(CreateTodoDto todo) =>
             Todo = todo;
 
-        public CreateOrUpdateTodoDto Todo { get; }
+        public CreateTodoDto Todo { get; }
     }
 }

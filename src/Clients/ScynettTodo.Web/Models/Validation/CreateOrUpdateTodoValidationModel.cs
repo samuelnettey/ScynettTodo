@@ -12,9 +12,6 @@ namespace ScynettTodo.Web.Models.Validation
         
         [Required(ErrorMessage = "Status of this todo is required")]
         public bool Completed { get; set; }
-
-        [Required(ErrorMessage = "User ID associated with this todo is required")]
-        [Range(1, 100)]
-        public int UserId { get; set; }
+        
     }
 }

@@ -55,7 +55,7 @@ namespace ScynettTodo.Web.Pages
         private void HandleValidSubmit()
         {
             // We use the bang operator (!) to tell the compiler we'll know this string field will not be null
-            Facade.UpdateTodo(TodosState.Value.CurrentTodo!.Id, validationModel.Title!, validationModel.Completed, validationModel.Description);
+            Facade.UpdateTodo(TodosState.Value.CurrentTodo!.Id, validationModel.Title!, validationModel.Description);
         }
         
     }
